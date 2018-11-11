@@ -11,9 +11,7 @@
 
 .column {
   float: left;
-  width: 31%;
   margin: 20px 1.15%;
-  height: 160px;
   background-color: #B2D6FF;    /* Medium blue */
 }
 
@@ -56,10 +54,24 @@
 p {
   margin-bottom: 20px;
 }
-
 .footer {
+  background-color: #EAEDF0;
+}
+
+
+.footer__inner {
   overflow: hidden;
   background-color: #D6E9FE;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+@media (max-width: 768px) {
+  .footer__inner {
+    grid-template: repeat(3, 1fr) / 1fr ;
+  }
 }
 
 .avatar {
@@ -79,3 +91,4 @@ p {
   margin: 10px;
   overflow: hidden;  /* This is important */
 }
+
